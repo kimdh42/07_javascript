@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개</title>
+    <style>
+        #haeder {
+            font-family: "Dongle";
+        }
+        
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="haeder" style="text-align: center;" >My Profile</h1>
+    <hr>
+
+    <div class="title" style="background-color: pink; height: 150px;">
+        <h1 style="text-align: center;"></h1>
+        <p>해위 😁</p>
+    </div>
+            
+    <script>
+        const content = "Hello!";
+        const text = document.querySelector(".title h1");
+        let textIdx = 0;
+
+        function set() {
+            let txt = content[textIdx++];
+            text.innerHTML = txt; 
+
+            if(textIdx >= content.length) { 
+                text.textContent = "";
+                textIdx = 0;
+            }
+        }
+
+        setInterval(set, 500);
+    </script>
+
+    <div style="background-color: aqua; width: 100px; height: 500px;">
+        영역전개
+    </div>
+
+</body>
+</html>
